@@ -1,0 +1,4 @@
+2026-10-29T09:15:00.000Z Normal   Scheduled  3m (x2 over 3m)   default-scheduler        Successfully assigned default/db-replica-0 to worker-node-4
+2026-10-29T09:15:02.100Z Warning  FailedMount  2m (x4 over 3m)   attachdetach-controller  AttachVolume.Attach failed for volume "pvc-89a31b2e" : persistentvolumeclaim "db-data-pvc" not found
+2026-10-29T09:15:10.220Z Warning  FailedMount  1m (x3 over 2m)   kubelet                  MountVolume.SetUp failed for volume "pvc-89a31b2e" : unbound Immediate PersistentVolumeClaims
+2026-10-29T09:15:20.000Z Warning  FailedMount  30s (x2 over 1m)  kubelet                  MountVolume.SetUp failed for volume "pvc-89a31b2e" : storage class "fast-nvme" not found

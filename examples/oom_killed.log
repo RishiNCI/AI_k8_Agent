@@ -1,0 +1,16 @@
+2026-10-29T10:00:01.120456789Z [order-service-7b649d88-x8k2j/order-api] INFO com.example.order.OrderApplication - Starting OrderApplication v2.3.0 on order-service-7b649d88-x8k2j
+2026-10-29T10:00:03.450123456Z [order-service-7b649d88-x8k2j/order-api] INFO com.example.order.OrderApplication - JVM Options: -Xms256m -Xmx768m -XX:+UseG1GC
+2026-10-29T10:00:05.890123789Z [order-service-7b649d88-x8k2j/order-api] INFO com.example.order.OrderApplication - Started OrderApplication in 4.77 seconds
+2026-10-29T10:05:12.301984210Z [order-service-7b649d88-x8k2j/order-api] INFO com.example.order.controller.BatchController - Starting batch processing for 50,000 pending transactions
+2026-10-29T10:05:40.112984123Z [order-service-7b649d88-x8k2j/order-api] WARN com.example.order.service.MemoryMonitor - High memory utilization: 480MB / 512MB cgroup limit (93.7%)
+2026-10-29T10:05:48.552981290Z [order-service-7b649d88-x8k2j/order-api] WARN org.apache.tomcat.util.net.NioEndpoint - Thread pool allocation under pressure
+2026-10-29T10:06:01.002341892Z [order-service-7b649d88-x8k2j/order-api] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3537)
+	at java.base/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:228)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:120)
+	at com.example.order.service.BatchProcessor.process(BatchProcessor.java:142)
+	at com.example.order.controller.BatchController.lambda$start$0(BatchController.java:55)
+2026-10-29T10:06:02.198374821Z [order-service-7b649d88-x8k2j/order-api] stderr F [kernel] Memory cgroup out of memory: Killed process 41829 (java) total-vm:1894212kB, anon-rss:512800kB, file-rss:1240kB, shmem-rss:0kB
+2026-10-29T10:06:02.210982341Z [order-service-7b649d88-x8k2j/order-api] command terminated with exit code 137
+2026-10-29T10:06:05.000000000Z Warning  OOMKilling  4s  kubelet  Memory cgroup out of memory: Killed process 41829 (java) in pod order-service-7b649d88-x8k2j

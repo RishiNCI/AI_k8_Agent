@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: k8s-investigation-agent
+Version: 0.1.0
+Summary: Autonomous Kubernetes Investigation Agent for Root Cause Analysis and Evidence Extraction
+Author: SRE & Agentic Engineering Team
+License: Apache-2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.0
+Requires-Dist: rich>=13.0
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: llm
+Requires-Dist: google-genai>=2.0; extra == "llm"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"

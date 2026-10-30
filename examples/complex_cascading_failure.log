@@ -1,0 +1,10 @@
+2026-10-29T14:10:00.100Z [payment-gateway-556bc9f944-9qlz8/gateway] INFO app.main - Payment gateway initializing...
+2026-10-29T14:10:01.200Z [payment-gateway-556bc9f944-9qlz8/gateway] INFO app.main - Listening on port 8080
+2026-10-29T14:12:30.450Z [payment-gateway-556bc9f944-9qlz8/gateway] ERROR app.db - Failed to connect to database: lookup postgres-cluster.db.svc.cluster.local: i/o timeout
+2026-10-29T14:12:35.480Z [payment-gateway-556bc9f944-9qlz8/gateway] ERROR app.db - dial tcp 10.96.12.44:5432: i/o timeout
+2026-10-29T14:12:40.012Z [payment-gateway-556bc9f944-9qlz8/gateway] ERROR app.health - Database ping failed during readiness check: could not translate host name "postgres-cluster.db.svc.cluster.local"
+2026-10-29T14:12:42.000Z Warning  Unhealthy  10s (x2 over 20s)  kubelet  Readiness probe failed: HTTP probe failed with statuscode: 500
+2026-10-29T14:12:55.000Z Warning  Unhealthy  1s (x3 over 15s)   kubelet  Liveness probe failed: HTTP probe failed with statuscode: 500
+2026-10-29T14:12:56.000Z Normal   Killing    0s                 kubelet  Container gateway failed liveness probe, will be restarted
+2026-10-29T14:13:00.000Z Warning  BackOff    2s (x4 over 30s)   kubelet  Back-off restarting failed container gateway in pod payment-gateway-556bc9f944-9qlz8
+2026-10-29T14:13:02.100Z [payment-gateway-556bc9f944-9qlz8/gateway] stderr F Back-off restarting failed container

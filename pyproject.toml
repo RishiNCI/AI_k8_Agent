@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k8s-investigation-agent"
+version = "0.1.0"
+description = "Autonomous Kubernetes Investigation Agent for Root Cause Analysis and Evidence Extraction"
+readme = "README.md"
+authors = [{ name = "SRE & Agentic Engineering Team" }]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+llm = [
+    "google-genai>=2.0",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+k8s-investigate = "k8s_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["k8s_agent*"]

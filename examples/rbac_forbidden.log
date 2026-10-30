@@ -1,0 +1,5 @@
+2026-10-29T16:00:00.000Z [prometheus-operator-79d84c6c99-b5t2w/operator] INFO Starting Prometheus Operator version 0.68.0
+2026-10-29T16:00:01.000Z [prometheus-operator-79d84c6c99-b5t2w/operator] INFO Synchronizing informer caches for custom resources...
+2026-10-29T16:00:01.250Z [prometheus-operator-79d84c6c99-b5t2w/operator] ERROR leaderelection.go:330 error retrieving resource lock monitoring/prometheus-operator-lock: is forbidden: User "system:serviceaccount:monitoring:prometheus-operator" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "monitoring"
+2026-10-29T16:00:03.110Z [prometheus-operator-79d84c6c99-b5t2w/operator] FATAL main.go:142 failed to start informer: 403 Forbidden: User "system:serviceaccount:monitoring:prometheus-operator" cannot list resource "prometheuses" in API group "monitoring.coreos.com" in the namespace "monitoring"
+2026-10-29T16:00:03.150Z [prometheus-operator-79d84c6c99-b5t2w/operator] command terminated with exit code 1

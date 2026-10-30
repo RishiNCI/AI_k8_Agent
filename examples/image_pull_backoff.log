@@ -1,0 +1,6 @@
+2026-10-29T11:00:00.000Z Normal   Scheduled  5m                default-scheduler  Successfully assigned default/analytics-worker-578b6689d-v2d9p to node-worker-pool-2
+2026-10-29T11:00:02.000Z Normal   Pulling    4m58s             kubelet            Pulling image "internal-harbor.company.net/analytics/spark-runner:v3.5.9-hotfix"
+2026-10-29T11:00:05.120Z Warning  Failed     4m55s             kubelet            Failed to pull image "internal-harbor.company.net/analytics/spark-runner:v3.5.9-hotfix": rpc error: code = NotFound desc = failed to pull and unpack image "internal-harbor.company.net/analytics/spark-runner:v3.5.9-hotfix": manifest for internal-harbor.company.net/analytics/spark-runner:v3.5.9-hotfix not found
+2026-10-29T11:00:05.150Z Warning  Failed     4m55s             kubelet            Error: ErrImagePull
+2026-10-29T11:00:15.000Z Normal   BackOff    4m45s (x2 over 4m50s) kubelet        Back-off pulling image "internal-harbor.company.net/analytics/spark-runner:v3.5.9-hotfix"
+2026-10-29T11:00:15.100Z Warning  Failed     4m45s (x2 over 4m50s) kubelet        Error: ImagePullBackOff

@@ -1,0 +1,16 @@
+2026-10-29T15:20:00.010Z [auth-service-6789cf4-k78lp/auth] INFO [main] Bootstrapping authentication microservice
+2026-10-29T15:20:00.150Z [auth-service-6789cf4-k78lp/auth] ERROR [main] KeyError: 'DATABASE_URL' environment variable is not set
+Traceback (most recent call last):
+  File "/app/manage.py", line 22, in <module>
+    main()
+  File "/app/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/app/config/settings.py", line 64, in <module>
+    DB_PASSWORD = os.environ['DATABASE_URL']
+  File "/usr/local/lib/python3.11/os.py", line 685, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'DATABASE_URL'
+2026-10-29T15:20:01.000Z [auth-service-6789cf4-k78lp/auth] process exited with code 1
+2026-10-29T15:20:02.000Z Warning  BackOff  1s (x3 over 20s)  kubelet  Back-off restarting failed container auth in pod auth-service-6789cf4-k78lp
